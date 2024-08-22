@@ -1273,6 +1273,9 @@ MixpanelLib.prototype._send_request = function (url, data, options, callback) {
             }
           }
         }
+      })["catch"](function (e) {
+        lib.report_error(e);
+        succeeded = false;
       });
     } catch (e) {
       lib.report_error(e);

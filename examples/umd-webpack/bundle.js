@@ -4697,6 +4697,10 @@
 	                }
 	              }
 	            }
+	          })
+	          .catch(function(e) {
+	            lib.report_error(e);
+	            succeeded = false;
 	          });
 	      } catch (e) {
 	        lib.report_error(e);
